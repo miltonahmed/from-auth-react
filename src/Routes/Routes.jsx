@@ -1,6 +1,8 @@
 import { createBrowserRouter } from 'react-router';
 import Auth from '../Layouts/Auth';
+import Home from '../Pages/Home';
 import Login from '../Pages/Login';
+import Logout from '../Pages/Logout';
 import Register from '../Pages/Register';
 
 export const router = createBrowserRouter([
@@ -10,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Login />,
+        element: <Home/>,
       },
 
       {
@@ -20,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register />,
+      },
+      {
+        path: 'logout',
+        element: <Logout />,
       },
     ],
   },
